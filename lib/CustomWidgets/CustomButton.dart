@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:food_app/Styles/StyleConstants.dart';
+
+class CustomButton extends StatelessWidget {
+  final Function onPressed;
+  final String text;
+  final Color buttonColor;
+  final Color textColor;
+
+  const CustomButton(
+      {Key key,
+      @required this.onPressed,
+      @required this.text,
+      this.buttonColor,
+      this.textColor})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ButtonTheme(
+      minWidth: 130,
+      height: 50.0,
+      child: RaisedButton(
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        onPressed: onPressed,
+        color: buttonColor,
+        child: Text(
+          text,
+          style: TextStyle(color: textColor),
+        ),
+      ),
+    );
+  }
+}
