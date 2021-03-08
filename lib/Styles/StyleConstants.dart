@@ -11,3 +11,6 @@ sizeWidth(BuildContext context){
   double width=MediaQuery.of(context).size.width;
   return width;
 }
+
+const double padFromHorizScrn=10.0;
+const EdgeInsets paddingFromScreenBorder=const EdgeInsets.fromLTRB(padFromHorizScrn, 5, padFromHorizScrn, 5);
