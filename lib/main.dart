@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Food App',
       debugShowCheckedModeBanner: false,
       theme: themeData,
-      home: CategoryScreen(),
+      home: PopularFood(),
     );
   }
 }

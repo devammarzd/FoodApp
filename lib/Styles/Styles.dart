@@ -17,13 +17,15 @@ final ThemeData themeData = ThemeData(
     textTheme: TextTheme(
      
       headline1: TextStyle(//This style is for product card headings that are in grid view
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: FontWeight.bold,
-        color:Colors.purple,
+        color:Colors.black,
         fontFamily: Fonts.mainFont,
+        letterSpacing: -0.4
+       
       ),
-      headline2: TextStyle(
-        fontSize: 16,
+      headline2: TextStyle(//this is for the headings in scafold body like "Popular Food Items" in popular food screen
+        fontSize: 30,
         fontWeight: FontWeight.bold,
         color: Colors.black,
         fontFamily: Fonts.mainFont,
@@ -35,7 +37,7 @@ final ThemeData themeData = ThemeData(
         fontFamily: Fonts.mainFont,
       ),
       bodyText1: TextStyle(
-        fontSize: 13,
+        fontSize: 18,
         fontWeight: FontWeight.normal,
         color: Colors.black,
         fontFamily: Fonts.mainFont,
