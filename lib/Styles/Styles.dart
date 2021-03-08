@@ -8,17 +8,18 @@ class Fonts {
 }
 
 final ThemeData themeData = ThemeData(
+
     primaryColor: primaryColor,
     accentColor: primaryColor,
     cursorColor: Colors.black,
     fontFamily: Fonts.mainFont,
     
     textTheme: TextTheme(
-      
-      headline1: TextStyle(
-        fontSize: 18,
+     
+      headline1: TextStyle(//This style is for product card headings that are in grid view
+        fontSize: 16,
         fontWeight: FontWeight.bold,
-        color:Colors.black,
+        color:Colors.purple,
         fontFamily: Fonts.mainFont,
       ),
       headline2: TextStyle(

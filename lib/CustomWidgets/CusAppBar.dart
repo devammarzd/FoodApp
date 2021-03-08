@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
-import 'package:food_app/basket_icons.dart';
+
+import 'package:food_app/custom_icons_icons.dart';
 
 class CusAppBar extends StatelessWidget {
   bool withSearchnBasket;
@@ -50,7 +51,7 @@ class CusAppBar extends StatelessWidget {
               onPressed: () {},
               splashRadius: 25,
               icon: Icon(
-                Basket.basket,
+              CustomIcons.basket,
                 size: 22,
                 color: Colors.black,
               ))

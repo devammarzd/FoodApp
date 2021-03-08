@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:food_app/CustomWidgets/CusAppBar.dart';
 import 'package:food_app/Data/CategorysData.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
-import 'package:food_app/basket_icons.dart';
 
 class CategoryScreen extends StatefulWidget {
   @override
@@ -16,17 +15,19 @@ class _CategoryScreenState extends State<CategoryScreen> {
       appBar: PreferredSize(
         preferredSize:
             Size(AppBar().preferredSize.width, AppBar().preferredSize.height),
-        child: CusAppBar(withSearchnBasket: true,title: "Categories",),
+        child: CusAppBar(
+          withSearchnBasket: true,
+          title: "Categories",
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-                 padding: paddingFromScreenBorder,
-
+          padding: paddingFromScreenBorder,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 10,bottom: 10),
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
                 child: ListView.builder(
                     itemCount: catData.length,
                     shrinkWrap: true,
