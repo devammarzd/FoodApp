@@ -7,12 +7,7 @@ class Fonts {
   static String get mainFont => _mulish;
 }
 
-// light text style for sub text
-TextStyle lightTextStyles = TextStyle(
-  fontSize: 12,
-  fontWeight: FontWeight.w300,
-  fontFamily: Fonts.mainFont,
-);
+TextStyle lightTextStyles = TextStyle();
 
 final ThemeData themeData = ThemeData(
     primaryColor: primaryColor,
@@ -34,10 +29,10 @@ final ThemeData themeData = ThemeData(
         color: Colors.black,
         fontFamily: Fonts.mainFont,
       ),
+      // light text style for sub text
       headline3: TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
+        fontSize: 12,
+        fontWeight: FontWeight.w300,
         fontFamily: Fonts.mainFont,
       ),
       bodyText1: TextStyle(

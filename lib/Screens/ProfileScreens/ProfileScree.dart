@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/CustomWidgets/CusAppBar.dart';
 import 'package:food_app/CustomWidgets/CustomButton.dart';
 import 'package:food_app/CustomWidgets/FoodGrid.dart';
+import 'package:food_app/Screens/ProfileScreens/EditProfileScreen.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 import 'package:food_app/Styles/Styles.dart';
 
@@ -56,9 +57,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 width: 160,
                 child: Text(
                   "47 W 13th St, New York, NY 10011, USA",
-                  style: lightTextStyles.copyWith(
-                    height: 1.5,
-                  ),
+                  style: Theme.of(context).textTheme.headline3.copyWith(
+                        height: 1.7,
+                      ),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -70,13 +71,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Edit Profile"),
-                  IconButton(
-                    icon: Icon(
-                      Icons.edit,
-                      color: primaryColor,
+                  InkWell(
+                    borderRadius: BorderRadius.circular(500),
+                    onTap: () {},
+                    child: Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(500),
+                      ),
+                      child: Icon(
+                        Icons.edit,
+                        color: primaryColor,
+                        size: 20,
+                      ),
                     ),
-                    onPressed: () {},
-                  )
+                  ),
                 ],
               ),
               SizedBox(
