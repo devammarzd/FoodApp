@@ -19,7 +19,7 @@ class _FoodGridState extends State<FoodGrid> {
                 mainAxisSpacing: 20,
                 crossAxisCount: 2,
 
-                childAspectRatio: 0.7,
+                childAspectRatio:sizeWidth(context)/(sizeHeight(context)/1.55),
                 children: popularFoodData
                     .map(
                       (item) => Card(
@@ -32,7 +32,7 @@ class _FoodGridState extends State<FoodGrid> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                height: 160,
+                                height: sizeHeight(context)/6,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
