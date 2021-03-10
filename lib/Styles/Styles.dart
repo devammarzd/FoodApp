@@ -7,7 +7,7 @@ class Fonts {
   static String get mainFont => _mulish;
 }
 
-TextStyle lightTextStyles = TextStyle();
+Color lightColor = Colors.grey;
 
 final ThemeData themeData = ThemeData(
     primaryColor: primaryColor,

@@ -73,7 +73,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Text("Edit Profile"),
                   InkWell(
                     borderRadius: BorderRadius.circular(500),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => EditProfileScreen()),
+                      );
+                    },
                     child: Container(
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
