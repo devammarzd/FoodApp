@@ -21,81 +21,94 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           withSearchnBasket: false,
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: paddingFromScreenBorder,
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  // color: Colors.amber,
-                  height: 130,
-                  width: 120,
-                  child: Stack(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: Image.asset(
-                          "assets/images/profileImage.jpg",
-                          height: 110,
-                          width: 110,
-                        ),
-                      ),
-                      Positioned(
-                        right: 0,
-                        bottom: 10,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: 18,
-                          child: Icon(
-                            Icons.camera_alt_outlined,
-                            size: 22,
-                            color: Colors.black54,
+      resizeToAvoidBottomPadding: true,
+      body: Padding(
+        padding: paddingFromScreenBorder,
+        child: Center(
+          child: SingleChildScrollView(
+            child: Container(
+              height: sizeHeight(context) / 1.18,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    height: 120,
+                    width: 120,
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(30),
+                          child: Image.asset(
+                            "assets/images/profileImage.jpg",
+                            height: 110,
+                            width: 110,
                           ),
                         ),
-                      )
-                    ],
+                        Positioned(
+                          right: 0,
+                          bottom: 0,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 18,
+                            child: Icon(
+                              Icons.camera_alt_outlined,
+                              size: 22,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ProfileTextField(
-                  fieldIcon: Icon(Icons.person_outline_outlined),
-                  textLabel: "User Name",
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                ProfileTextField(
-                  fieldIcon: Icon(Icons.person_outline_outlined),
-                  textLabel: "Full Name",
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                ProfileTextField(
-                  fieldIcon: Icon(
-                    CustomIcons.email,
-                    size: 16,
+                  ProfileTextField(
+                    fieldIcon: Icon(Icons.person_outline_outlined),
+                    textLabel: "User Name",
                   ),
-                  textLabel: "Email",
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                ProfileTextField(
-                  fieldIcon: Icon(
-                    CustomIcons.address,
-                    size: 16,
+                  ProfileTextField(
+                    fieldIcon: Icon(Icons.person_outline_outlined),
+                    textLabel: "Full Name",
                   ),
-                  textLabel: "Address",
-                ),
-              ],
+                  ProfileTextField(
+                    fieldIcon: Icon(
+                      CustomIcons.email,
+                      size: 16,
+                    ),
+                    textLabel: "Email",
+                  ),
+                  ProfileTextField(
+                    fieldIcon: Icon(
+                      CustomIcons.address,
+                      size: 16,
+                    ),
+                    textLabel: "Address",
+                  ),
+                  Container(),
+                  //Have to make it a custom button
+                  ButtonTheme(
+                    minWidth: sizeWidth(context) / 1.1,
+                    height: 50.0,
+                    child: RaisedButton(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      onPressed: () {},
+                      color: primaryColor,
+                      child: Text(
+                        "Save Changes",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(),
+                  Container(),
+                ],
+              ),
             ),
           ),
         ),
