@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/Data/CategorysData.dart';
 import 'package:food_app/Screens/CategoriesScreens/CategoryListScreen.dart';
 import 'package:food_app/Screens/Popular%20Food/PopularFood.dart';
+import 'package:food_app/Screens/ProfileScreens/EditProfileScreen.dart';
 import 'package:food_app/Screens/ProfileScreens/ProfileScree.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 import 'package:food_app/Styles/Styles.dart';
