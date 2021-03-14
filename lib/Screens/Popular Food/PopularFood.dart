@@ -3,6 +3,7 @@ import 'package:food_app/CustomWidgets/CusAppBar.dart';
 import 'package:food_app/CustomWidgets/FoodGrid.dart';
 import 'package:food_app/Data/CategorysData.dart';
 import 'package:food_app/Data/PopularFoodData.dart';
+import 'package:food_app/CustomWidgets/CustomScaffold.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 
 class PopularFood extends StatefulWidget {
@@ -13,8 +14,9 @@ class PopularFood extends StatefulWidget {
 class _PopularFoodState extends State<PopularFood> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
+    return CustomScaffold(
+      index: 0,
+      appbar: PreferredSize(
         preferredSize:
             Size(AppBar().preferredSize.width, AppBar().preferredSize.height),
         child: CusAppBar(
