@@ -51,3 +51,33 @@ final ThemeData themeData = ThemeData(
         fontFamily: Fonts.mainFont,
       ),
     ));
+
+class CustomLargeButton extends StatelessWidget {
+  final String buttonText;
+
+  const CustomLargeButton({Key key, @required this.buttonText})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ButtonTheme(
+      minWidth: sizeWidth(context) / 1.1,
+      height: 50.0,
+      child: RaisedButton(
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        onPressed: () {},
+        color: primaryColor,
+        child: Text(
+          buttonText,
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+}

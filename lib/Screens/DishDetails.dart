@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
+import 'package:food_app/Styles/Styles.dart';
 
 class DishDetails extends StatefulWidget {
   @override
@@ -38,7 +39,7 @@ class _DishDetailsState extends State<DishDetails> {
               child: Stack(
                 children: [
                   Image.asset(
-                    "assets/images/shrimpsargula.jpg",
+                    "assets/images/ricewithgreenpeas.jpg",
                     width: sizeWidth(context),
                     fit: BoxFit.fill,
                   ),
@@ -87,13 +88,14 @@ class _DishDetailsState extends State<DishDetails> {
                                   Positioned(
                                     left: 30.0,
                                     child: RounderReviewImage(
-                                      imagePath: "assets/images/profile2.jpg",
+                                      imagePath: "assets/images/profilepic.jpg",
                                     ),
                                   ),
                                   Positioned(
                                     left: 10,
                                     child: RounderReviewImage(
-                                      imagePath: "assets/images/profile3.jpg",
+                                      imagePath:
+                                          "assets/images/profileImage.jpg",
                                     ),
                                   )
                                 ],
@@ -146,6 +148,7 @@ class _DishDetailsState extends State<DishDetails> {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12, right: 12),
                           child: Column(
+                            mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
@@ -231,6 +234,68 @@ class _DishDetailsState extends State<DishDetails> {
                               Text(
                                 "This Shrimp, Peas and Rice dish is a family favourite! It's quick to cook and requires no chopping, easy.",
                                 style: Theme.of(context).textTheme.headline3,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text("Ingredients"),
+                              Container(
+                                height: 110,
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: ListView.builder(
+                                        itemCount: 8,
+                                        shrinkWrap: true,
+                                        scrollDirection: Axis.horizontal,
+                                        itemBuilder: (context, index) {
+                                          return Padding(
+                                            padding: const EdgeInsets.all(8),
+                                            child: Material(
+                                              color: Colors.white,
+                                              elevation: 4,
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                ),
+                                                padding: EdgeInsets.fromLTRB(
+                                                    12, 12, 12, 12),
+                                                child: Column(
+                                                  children: [
+                                                    Image.asset(
+                                                      "assets/images/illustrations/Group 3860.png",
+                                                      height: 45,
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 4),
+                                                      child: Text(
+                                                        "Green Peas",
+                                                        style: TextStyle(
+                                                          fontSize: 12,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              CustomLargeButton(
+                                buttonText: "Add to cart",
                               )
                             ],
                           ),
