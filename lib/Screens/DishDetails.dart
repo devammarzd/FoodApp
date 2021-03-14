@@ -295,6 +295,7 @@ class _DishDetailsState extends State<DishDetails> {
                                 height: 20,
                               ),
                               CustomLargeButton(
+                                onPress: () {},
                                 buttonText: "Add to cart",
                               )
                             ],

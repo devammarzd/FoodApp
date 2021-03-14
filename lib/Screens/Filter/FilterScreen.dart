@@ -306,6 +306,7 @@ class _FilterScreenState extends State<FilterScreen> {
                 child: Container(
                   alignment: Alignment.bottomCenter,
                   child: CustomLargeButton(
+                    onPress: () {},
                     buttonText: "Apply Filter",
                   ),
                 ),

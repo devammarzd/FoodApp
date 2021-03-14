@@ -87,6 +87,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   Container(),
                   //Have to make it a custom button
                   CustomLargeButton(
+                    onPress: () {},
                     buttonText: "Save Changes",
                   ),
                   Container(),

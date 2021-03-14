@@ -54,8 +54,10 @@ final ThemeData themeData = ThemeData(
 
 class CustomLargeButton extends StatelessWidget {
   final String buttonText;
+  final Function onPress;
 
-  const CustomLargeButton({Key key, @required this.buttonText})
+  const CustomLargeButton(
+      {Key key, @required this.buttonText, @required this.onPress})
       : super(key: key);
 
   @override
@@ -68,7 +70,7 @@ class CustomLargeButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
-        onPressed: () {},
+        onPressed: onPress,
         color: primaryColor,
         child: Text(
           buttonText,
