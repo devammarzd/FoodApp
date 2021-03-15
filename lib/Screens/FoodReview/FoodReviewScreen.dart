@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+import 'package:food_app/CustomWidgets/RatingBar.dart';
+import 'package:food_app/Styles/StyleConstants.dart';
+import 'package:food_app/Styles/Styles.dart';
+
+class FoodReview extends StatefulWidget {
+  @override
+  _FoodReviewState createState() => _FoodReviewState();
+}
+
+class _FoodReviewState extends State<FoodReview> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: InkWell(
+          onTap: () {},
+          child: Icon(
+            Icons.arrow_back_ios_rounded,
+            color: Colors.black,
+          ),
+        ),
+        title: Text(
+          "Food Review",
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+        elevation: 0,
+      ),
+      body: Padding(
+        padding: paddingFromScreenBorder,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Center(
+              child: Container(
+                width: sizeWidth(context) / 1.8,
+                alignment: Alignment.center,
+                child: Text(
+                  "How Was The Food Taste",
+                  style: Theme.of(context).textTheme.headline2,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            SizedBox(height: 45),
+            Image.asset(
+              "assets/images/illustrations/Group 34396.png",
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              height: 50,
+              width: sizeWidth(context) / 1.6,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RatingBar(
+                    rating: 2,
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

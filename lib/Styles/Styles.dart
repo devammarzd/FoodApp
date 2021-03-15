@@ -8,6 +8,7 @@ class Fonts {
 }
 
 Color lightColor = Colors.grey;
+Color backgroundLightColor = Color(0xffebe8e8);
 
 final ThemeData themeData = ThemeData(
     primaryColor: primaryColor,

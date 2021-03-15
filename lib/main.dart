@@ -3,6 +3,7 @@ import 'package:food_app/Data/CategorysData.dart';
 import 'package:food_app/Screens/CategoriesScreens/CategoryListScreen.dart';
 import 'package:food_app/Screens/DishDetails.dart';
 import 'package:food_app/Screens/Filter/FilterScreen.dart';
+import 'package:food_app/Screens/FoodReview/FoodReviewScreen.dart';
 import 'package:food_app/Screens/Order/MyOrderScreen.dart';
 import 'package:food_app/Screens/Popular%20Food/PopularFood.dart';
 import 'package:food_app/Screens/ProfileScreens/EditProfileScreen.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: themeData,
       //TO be change to popular food
-      home: MyOrderScreen(),
+      home: FoodReview(),
     );
   }
 }
