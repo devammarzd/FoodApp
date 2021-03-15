@@ -46,8 +46,46 @@ final ThemeData themeData = ThemeData(
 
       bodyText1: TextStyle(
         fontSize: 18,
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+        fontFamily: Fonts.mainFont,
+      ),
+      bodyText2:  TextStyle(//for common heading of font size 16
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
         color: Colors.black,
         fontFamily: Fonts.mainFont,
       ),
     ));
+
+class CustomLargeButton extends StatelessWidget {
+  final String buttonText;
+  final Function onPress;
+
+  const CustomLargeButton(
+      {Key key, @required this.buttonText, @required this.onPress})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ButtonTheme(
+      minWidth: sizeWidth(context) / 1.1,
+      height: 50.0,
+      child: RaisedButton(
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        onPressed: onPress,
+        color: primaryColor,
+        child: Text(
+          buttonText,
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+}

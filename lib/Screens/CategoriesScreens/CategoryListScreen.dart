@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/CustomWidgets/CusAppBar.dart';
 import 'package:food_app/Data/CategorysData.dart';
+import 'package:food_app/CustomWidgets/CustomScaffold.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 
 class CategoryScreen extends StatefulWidget {
@@ -12,6 +13,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+  
+      
       appBar: PreferredSize(
         preferredSize:
             Size(AppBar().preferredSize.width, AppBar().preferredSize.height),
