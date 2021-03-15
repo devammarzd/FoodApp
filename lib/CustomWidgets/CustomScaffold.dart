@@ -84,9 +84,9 @@ class _CustomScaffoldState extends State<CustomScaffold> {
               //   MaterialPageRoute(builder: (context) => PopularFood()),
               // );
             } else if (i == 1) {
-                             Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(builder: (context) => CategoryScreen()),
-                  (Route<dynamic> route) => false);
+                  //            Navigator.of(context).pushAndRemoveUntil(
+                  // MaterialPageRoute(builder: (context) => CategoryScreen()),
+                  // (Route<dynamic> route) => false);
      
             }
           }

@@ -12,10 +12,10 @@ class CategoryScreen extends StatefulWidget {
 class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      index: 1,
+    return Scaffold(
+  
       
-      appbar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize:
             Size(AppBar().preferredSize.width, AppBar().preferredSize.height),
         child: CusAppBar(

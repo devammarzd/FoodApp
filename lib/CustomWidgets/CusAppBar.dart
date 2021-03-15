@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:food_app/Screens/ProfileScreens/ProfileScree.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 
 import 'package:food_app/custom_icons_icons.dart';
@@ -67,14 +68,24 @@ class CusAppBar extends StatelessWidget {
               ? [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(8,3,8,3),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                        child: Image.asset(
-                      "assets/images/profilepic.jpg",
-                      width: 50,
-                      height: 50,
-                      fit: BoxFit.fill,
-                    )),
+                    child: InkWell(
+                    onTap: (){
+                       Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ProfileScreen()),
+                              );
+                    },
+                    borderRadius: BorderRadius.circular(20),
+                                          child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                        "assets/images/profilepic.jpg",
+                        width: 50,
+                        height: 50,
+                        fit: BoxFit.fill,
+                      )),
+                    ),
                   ),
                 ]
               : [],

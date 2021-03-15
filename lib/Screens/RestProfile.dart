@@ -304,7 +304,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
               top: 40,
               child: InkWell(
                 onTap: () {
-                  // Navigator.pop(context);
+                  Navigator.pop(context);
                 },
                 child: Container(
                   height: 30,

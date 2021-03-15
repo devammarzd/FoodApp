@@ -86,24 +86,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   ),
                   Container(),
                   //Have to make it a custom button
-                  ButtonTheme(
-                    minWidth: sizeWidth(context) / 1.1,
-                    height: 50.0,
-                    child: RaisedButton(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      onPressed: () {},
-                      color: primaryColor,
-                      child: Text(
-                        "Save Changes",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                  CustomLargeButton(
+                    onPress: () {},
+                    buttonText: "Save Changes",
                   ),
                   Container(),
                   Container(),

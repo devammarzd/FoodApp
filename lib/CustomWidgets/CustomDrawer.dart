@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/Screens/CategoriesScreens/CategoryListScreen.dart';
+import 'package:food_app/Screens/ProfileScreens/ProfileScree.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 import 'package:food_app/Styles/Styles.dart';
 
@@ -94,7 +96,11 @@ class CustomDrawer extends StatelessWidget {
                     SizedBox(height: 15,),
                     ListTile(
                       onTap: (){
-                        
+                          Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ProfileScreen()),
+                              );
                       },
                       title: Text("Profile"),
                       subtitle: Text("See my profile",style: TextStyle(color: lightColor,fontSize: 12),),
@@ -105,7 +111,11 @@ class CustomDrawer extends StatelessWidget {
                     ),
                        ListTile(
                       onTap: (){
-                        
+                          Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CategoryScreen()),
+                              );
                       },
                       title: Text("Categories"),
                       subtitle: Text("See category items",style: TextStyle(color: lightColor,fontSize: 12),),
