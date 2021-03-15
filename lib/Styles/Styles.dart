@@ -47,7 +47,13 @@ final ThemeData themeData = ThemeData(
 
       bodyText1: TextStyle(
         fontSize: 18,
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+        fontFamily: Fonts.mainFont,
+      ),
+      bodyText2:  TextStyle(//for common heading of font size 16
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
         color: Colors.black,
         fontFamily: Fonts.mainFont,
       ),

@@ -4,7 +4,8 @@ List popularFoodData = [
     "price": "\$22.50",
     "rating": "4.9",
     "time": "20-25 Mins",
-    "image": "assets/images/buddharicebowl.jpg"
+    "image": "assets/images/buddharicebowl.jpg",
+    "HomeScreenImage":"assets/images/shrimpsandargula.jpg"
   },
    {
     "name": "Tortilla Wrap",
@@ -43,3 +44,25 @@ List popularFoodData = [
     "image": "assets/images/tortillawrap.jpg"
   },
 ];
+
+
+List popularFoodDataHome = [
+  {
+    "name": "Shrimps and Argula",
+    "price": "\$22.50",
+    "rating": "4.9",
+    "time": "20-25 Mins",
+    "image": "assets/images/shrimpsandargula.jpg",
+
+  },
+   {
+    "name": "Grilled Meat Skewers",
+    "price": "\$18.99",
+    "rating": "4.9",
+    "time": "20-25 Mins",
+    "image": "assets/images/grilledmeat.jpg"
+  },
+
+  
+];
+

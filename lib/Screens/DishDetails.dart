@@ -17,17 +17,22 @@ class _DishDetailsState extends State<DishDetails> {
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: EdgeInsets.all(padFromHorizScrn),
-            child: Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(3),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.grey)),
-              child: Icon(
-                Icons.arrow_back_ios_rounded,
-                color: Colors.black,
-                size: 19,
+            child: InkWell(
+              onTap: (){
+                Navigator.pop(context);
+              },
+                          child: Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(3),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.grey)),
+                child: Icon(
+                  Icons.arrow_back_ios_rounded,
+                  color: Colors.black,
+                  size: 19,
+                ),
               ),
             ),
           ),
