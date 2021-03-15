@@ -45,18 +45,18 @@ final ThemeData themeData = ThemeData(
         fontFamily: Fonts.mainFont,
       ),
 
-      bodyText1: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-        fontFamily: Fonts.mainFont,
-      ),
-      bodyText2:  TextStyle(//for common heading of font size 16
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-        fontFamily: Fonts.mainFont,
-      ),
+      // bodyText1: TextStyle(
+      //   fontSize: 18,
+      //   fontWeight: FontWeight.bold,
+      //   color: Colors.black,
+      //   fontFamily: Fonts.mainFont,
+      // ),
+      // bodyText2:  TextStyle(//for common heading of font size 16
+      //   fontSize: 16,
+      //   fontWeight: FontWeight.bold,
+      //   color: Colors.black,
+      //   fontFamily: Fonts.mainFont,
+      // ),
     ));
 
 class CustomLargeButton extends StatelessWidget {

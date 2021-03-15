@@ -53,20 +53,32 @@ class _FoodReviewState extends State<FoodReview> {
               height: 30,
             ),
             Container(
+              alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(10),
               ),
               height: 50,
               width: sizeWidth(context) / 1.6,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RatingBar(
-                    rating: 2,
-                  )
-                ],
+              child: RatingBar(
+                rating: 2,
               ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.comment,
+                ),
+                SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  "Add a comment",
+                ),
+              ],
             )
           ],
         ),
