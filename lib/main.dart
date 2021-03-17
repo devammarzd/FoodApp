@@ -5,6 +5,7 @@ import 'package:food_app/Screens/DishDetails.dart';
 import 'package:food_app/Screens/Filter/FilterScreen.dart';
 import 'package:food_app/Screens/Home/HomeScreen.dart';
 import 'package:food_app/Screens/Order/MyOrderScreen.dart';
+import 'package:food_app/Screens/RestaurantMap/RestaurantMap.dart';
 
 import 'package:food_app/Styles/Styles.dart';
 
@@ -21,7 +22,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: themeData,
       //TO be change to popular food
-      home: HomeScreen(),
+      home: 
+      RestaurantMap(),
+      //HomeScreen(),
     );
   }
 }
