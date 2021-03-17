@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: themeData,
       //TO be change to popular food
-      home: CartCheckoutScreen(),
+      home: RunningOrderScreen(),
     );
   }
 }
