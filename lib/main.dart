@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/Data/CategorysData.dart';
+import 'package:food_app/Screens/Cart/CartCheckout.dart';
+import 'package:food_app/Screens/Cart/CheckoutDetails.dart';
+import 'package:food_app/Screens/Cart/MyCard.dart';
 import 'package:food_app/Screens/CategoriesScreens/CategoryListScreen.dart';
 import 'package:food_app/Screens/DishDetails.dart';
 import 'package:food_app/Screens/Filter/FilterScreen.dart';
+import 'package:food_app/Screens/FoodReview/FoodReviewScreen.dart';
 import 'package:food_app/Screens/Home/HomeScreen.dart';
 import 'package:food_app/Screens/Order/MyOrderScreen.dart';
-import 'package:food_app/Screens/RestaurantMap/RestaurantMap.dart';
+import 'package:food_app/Screens/Order/RunningOrderScreen.dart';
 
 import 'package:food_app/Styles/Styles.dart';
 
@@ -22,9 +26,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: themeData,
       //TO be change to popular food
-      home: 
-      RestaurantMap(),
-      //HomeScreen(),
+      home:
+     HomeScreen()
+      // MyCardScreen(),
     );
   }
 }

@@ -306,7 +306,9 @@ class _FilterScreenState extends State<FilterScreen> {
                 child: Container(
                   alignment: Alignment.bottomCenter,
                   child: CustomLargeButton(
-                    onPress: () {},
+                    onPress: () {
+                      Navigator.pop(context);
+                    },
                     buttonText: "Apply Filter",
                   ),
                 ),

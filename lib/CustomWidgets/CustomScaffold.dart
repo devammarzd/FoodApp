@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/CustomWidgets/CusAppBar.dart';
 import 'package:food_app/CustomWidgets/CustomDrawer.dart';
 import 'package:food_app/Screens/Account/AccountScreen.dart';
+import 'package:food_app/Screens/Cart/CartCheckout.dart';
 import 'package:food_app/Screens/CategoriesScreens/CategoryListScreen.dart';
 import 'package:food_app/Screens/Favourite/FavouriteScreen.dart';
 import 'package:food_app/Screens/Home/HomeScreen.dart';
@@ -50,7 +51,13 @@ class _CustomScaffoldState extends State<CustomScaffold> {
       backgroundColor: Colors.white,
       appBar: widget.appbar,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+             Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CartCheckoutScreen()),
+                              );
+        },
         elevation: 8,
         backgroundColor: primaryColor,
         child: Icon(
