@@ -51,13 +51,12 @@ class _MyCardScreenState extends State<MyCardScreen> {
           title: "My Card",
         ),
       ),
-      body: Container(
-        height: sizeHeight(context),
-        child: Stack(
-          children: [
-            Padding(
-              padding: paddingFromScreenBorder,
-              child: Column(
+      body: Stack(
+        children: [
+          Padding(
+            padding: paddingFromScreenBorder,
+            child: SingleChildScrollView(
+                          child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                 
@@ -169,79 +168,85 @@ class _MyCardScreenState extends State<MyCardScreen> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height:  sizeHeight(context) / 4,
+                  ),
+                   SizedBox(
+                    height: 15,
+                  )
                 ],
               ),
             ),
-            //Checkout details here
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                height: sizeHeight(context) / 4,
-                width: sizeWidth(context),
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 7,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15),
+          ),
+          //Checkout details here
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: sizeHeight(context) / 4,
+              width: sizeWidth(context),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 7,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
                   ),
+                ],
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(11, 10, 11, 10),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Delivery Charges"),
-                          Text("\$0.00"),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Subtotal"),
-                          Text("\$90.00"),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Total",
-                            style:
-                                Theme.of(context).textTheme.headline1.copyWith(
-                                      fontSize: 16,
-                                    ),
-                          ),
-                          Text(
-                            "\$90.00",
-                            style:
-                                Theme.of(context).textTheme.headline1.copyWith(
-                                      fontSize: 16,
-                                    ),
-                          ),
-                        ],
-                      ),
-                      CustomLargeButton(
-                        onPress: () {},
-                        buttonText: "Checkout",
-                      )
-                    ],
-                  ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(11, 10, 11, 10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Delivery Charges"),
+                        Text("\$0.00"),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Subtotal"),
+                        Text("\$90.00"),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Total",
+                          style:
+                              Theme.of(context).textTheme.headline1.copyWith(
+                                    fontSize: 16,
+                                  ),
+                        ),
+                        Text(
+                          "\$90.00",
+                          style:
+                              Theme.of(context).textTheme.headline1.copyWith(
+                                    fontSize: 16,
+                                  ),
+                        ),
+                      ],
+                    ),
+                    CustomLargeButton(
+                      onPress: () {},
+                      buttonText: "Checkout",
+                    )
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

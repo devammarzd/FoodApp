@@ -84,7 +84,7 @@ class _RunningOrderScreenState extends State<RunningOrderScreen> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            height: sizeHeight(context) / 3.3,
+                            height: 250*resizeFactor(context),
                             width: sizeWidth(context) / 1.1,
                             child: Column(
                               children: [

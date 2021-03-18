@@ -39,5 +39,25 @@ List searchData = [
     "qty": "10"
 
   },
+    {
+    "name": "Stir-Fried Spicy and Herb",
+    "desc":"Herb with grouper fish",
+    "price": "\$22.50",
+    "rating": "4.9",
+    "time": "20-25 Mins",
+    "image": "assets/images/stirfriedspicyherb.jpg",
+    "qty": "5"
+
+  },
+    {
+    "name": "Stir-Fried Spicy and Herb",
+    "desc":"Herb with grouper fish",
+    "price": "\$22.50",
+    "rating": "4.9",
+    "time": "20-25 Mins",
+    "image": "assets/images/stirfriedspicyherb.jpg",
+    "qty": "5"
+
+  },
   
 ];

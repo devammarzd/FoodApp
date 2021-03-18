@@ -21,7 +21,7 @@ class _FoodGridState extends State<FoodGrid> {
       mainAxisSpacing: 20,
       crossAxisCount: 2,
 
-      childAspectRatio: sizeWidth(context) / (sizeHeight(context) / 1.55),
+      childAspectRatio: sizeWidth(context) / (sizeHeight(context)*resizeFactor(context) / 1.55),
       children: popularFoodData
           .map(
             (item) => Card(
@@ -103,21 +103,26 @@ class _FoodGridState extends State<FoodGrid> {
                                   Icon(
                                     Icons.star,
                                     color: starColor,
-                                    size: 20,
+                                    size: 18,
                                   ),
                                   Text(
                                     item['rating'],
-                                    style: TextStyle(fontSize: 12),
+                                    style: TextStyle(fontSize: 11),
                                   ),
-                                  Expanded(child: SizedBox()),
+                                
+                                SizedBox(width: 5,),
                                   Icon(
                                     Icons.alarm_rounded,
-                                    size: 20,
+                                    size: 18,
                                     color: primaryColor,
                                   ),
-                                  Text(
-                                    item["time"],
-                                    style: TextStyle(fontSize: 12),
+                                  Expanded(
+                                                                      child: Text(
+                                      item["time"],
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                      style: TextStyle(fontSize: 11),
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 3,

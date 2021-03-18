@@ -5,6 +5,7 @@ import 'package:food_app/Data/FoodTypes.dart';
 import 'package:food_app/Data/NearbyRest.dart';
 import 'package:food_app/Data/SearchData.dart';
 import 'package:food_app/Screens/DishDetails.dart';
+import 'package:food_app/Screens/FoodOffer.dart';
 import 'package:food_app/Screens/Popular%20Food/PopularFood.dart';
 import 'package:food_app/Screens/RestaurantMap/RestaurantMap.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
@@ -72,11 +73,11 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                     ),
                     InkWell(
                         onTap: () {
-                          //           Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //       builder: (context) => Food()),
-                          // );
+                                    Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FoodOfferScreen()),
+                          );
                         },
                         borderRadius: BorderRadius.circular(500),
                         child: Container(
@@ -105,7 +106,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
 
   Widget popularfoodsSlider() {
     return Container(
-      height: sizeHeight(context) / 2.7,
+      height: sizeHeight(context)*resizeFactor(context) / 2.7,
       width: sizeWidth(context),
       child: ListView.builder(
           itemCount: searchData.length,
@@ -385,7 +386,8 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                 ),
                                 Text(
                                   "Burger King",
-                                  style: Theme.of(context).textTheme.bodyText1,
+                                  textScaleFactor: 1.0,
+                                  style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 3,
@@ -395,6 +397,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                     alignment: Alignment.center,
                                     child: Text(
                                       "42 Riverside Se.NonCross GA 30092",
+                                      textScaleFactor: 1,
                                       maxLines: 2,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
@@ -414,6 +417,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                     ),
                                     Text(
                                       "4.9",
+                                              textScaleFactor: 1,
                                       style: TextStyle(fontSize: 14),
                                     ),
                                     SizedBox(
@@ -426,6 +430,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                     ),
                                     Text(
                                       "20-30 Mins",
+                                              textScaleFactor: 1,
                                       style: TextStyle(fontSize: 12),
                                     ),
                                     SizedBox(
@@ -438,6 +443,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                     ),
                                     Text(
                                       "Free Delivery",
+                                              textScaleFactor: 1,
                                       style: TextStyle(fontSize: 12),
                                     ),
                                     Expanded(child: SizedBox()),
@@ -459,6 +465,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                       alignment: Alignment.center,
                                       child: Text(
                                         nearbyData[0]["detail"][0],
+                                                textScaleFactor: 1,
                                         style: TextStyle(
                                             color: Colors.grey[400],
                                             fontSize: 12),
@@ -473,6 +480,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                       alignment: Alignment.center,
                                       child: Text(
                                         nearbyData[0]["detail"][1],
+                                                textScaleFactor: 1,
                                         style: TextStyle(
                                             color: Colors.grey[400],
                                             fontSize: 12),
@@ -487,6 +495,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                       alignment: Alignment.center,
                                       child: Text(
                                         nearbyData[0]["detail"][2],
+                                                textScaleFactor: 1,
                                         style: TextStyle(
                                             color: Colors.grey[400],
                                             fontSize: 12),
