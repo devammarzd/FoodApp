@@ -74,12 +74,14 @@ class _CustomScaffoldState extends State<CustomScaffold> {
         icons: iconList,
         activeIndex: widget.index,
         gapLocation: GapLocation.center,
+     
         activeColor: primaryColor,
         height: 70,
         inactiveColor: lightColor,
         splashSpeedInMilliseconds: 200,
         splashRadius: 0,
         notchSmoothness: NotchSmoothness.softEdge,
+        
         onTap: (i) {
           if (i != widget.index) {
             if (i == 0) {

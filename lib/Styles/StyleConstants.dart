@@ -13,7 +13,22 @@ sizeWidth(BuildContext context){
   double width=MediaQuery.of(context).size.width;
   return width;
 }
+currTxtScaleFac(BuildContext context){
+ double currTextScaleFactor=  MediaQuery.of(context).textScaleFactor;
+ return currTextScaleFactor;
+}
+resizeFactor(BuildContext context){
+   double _resizeFactor;
+   double currTextScaleFactor=currTxtScaleFac(context);
+  if(currTextScaleFactor>1){
+_resizeFactor= currTextScaleFactor*0.87;
+  }
+  else{
+ _resizeFactor=1.0;
+  }
 
+ return _resizeFactor;
+}
 const double padFromHorizScrn=10.0;
 const EdgeInsets paddingFromScreenBorder=const EdgeInsets.fromLTRB(padFromHorizScrn, 5, padFromHorizScrn, 5);
 

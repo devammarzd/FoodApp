@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Container(
-                    height: 270,
+                    height: 270*resizeFactor(context),
                     child: ListView.builder(
                         itemCount: popularFoodDataHome.length,
                         scrollDirection: Axis.horizontal,

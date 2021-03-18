@@ -73,7 +73,7 @@ class _CheckoutDetailsState extends State<CheckoutDetails> {
                     height: 20,
                   ),
                   Container(
-                    height: sizeHeight(context) / 6.5,
+                    height: 140*resizeFactor(context) ,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [

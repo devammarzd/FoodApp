@@ -131,13 +131,13 @@ class _RestaurantMapState extends State<RestaurantMap> {
                 bottom: MediaQuery.of(context).viewInsets.bottom),
             child: Container(
               color: Colors.transparent,
-              height: 250,
+              height: 250*resizeFactor(context),
               child: Stack(
                 children: [
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
-                      height: 230,
+                      height: 230*resizeFactor(context),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -168,7 +168,7 @@ class _RestaurantMapState extends State<RestaurantMap> {
                             ),
                             Text(
                               "Burger King",
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18),
                             ),
                             SizedBox(
                               height: 3,
