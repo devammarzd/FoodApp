@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Text(
                           'Popular Foods',
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: Theme.of(context).textTheme.headline5,
                         ),
                         InkWell(
                             onTap: () {
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     borderRadius: BorderRadius.circular(500)),
                                 child: Text(
                                   "View All",
-                                  style: TextStyle(fontSize: 13),
+                                  style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),
                                 )))
                       ],
                     ),
@@ -281,7 +281,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Text(
                           'Nearby Restaurants',
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: Theme.of(context).textTheme.headline5,
                         ),
                         InkWell(
                             onTap: () {
@@ -298,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     borderRadius: BorderRadius.circular(500)),
                                 child: Text(
                                   "View All",
-                                  style: TextStyle(fontSize: 13),
+                                  style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),
                                 )))
                       ],
                     ),

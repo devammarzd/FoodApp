@@ -6,6 +6,7 @@ List searchData = [
     "rating": "4.9",
     "time": "20-25 Mins",
     "image": "assets/images/stirfriedspicyherb.jpg",
+    "qty": "5"
 
   },
   {
@@ -15,6 +16,7 @@ List searchData = [
     "rating": "4.9",
     "time": "20-25 Mins",
     "image": "assets/images/noodleswithchicken.jpg",
+    "qty": "1"
 
   },
  {
@@ -24,6 +26,7 @@ List searchData = [
     "rating": "4.5",
     "time": "40-45 Mins",
     "image": "assets/images/shishkebab.jpg",
+    "qty": "2"
 
   },
   {
@@ -33,6 +36,7 @@ List searchData = [
     "rating": "3.9",
     "time": "40-45 Mins",
     "image": "assets/images/udonnoodles.jpg",
+    "qty": "10"
 
   },
   

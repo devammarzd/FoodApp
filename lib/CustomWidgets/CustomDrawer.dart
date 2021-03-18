@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/Screens/Cart/CartCheckout.dart';
+import 'package:food_app/Screens/Cart/MyCard.dart';
 import 'package:food_app/Screens/CategoriesScreens/CategoryListScreen.dart';
 import 'package:food_app/Screens/ProfileScreens/ProfileScree.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
@@ -126,7 +128,11 @@ class CustomDrawer extends StatelessWidget {
                     ),
                        ListTile(
                       onTap: (){
-                        
+                           Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CartCheckoutScreen()),
+                              );
                       },
                       title: Text("Cart"),
                       subtitle: Text("See my cart items",style: TextStyle(color: lightColor,fontSize: 12),),
@@ -137,7 +143,11 @@ class CustomDrawer extends StatelessWidget {
                     ),
                        ListTile(
                       onTap: (){
-                        
+                           Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyCardScreen()),
+                              );
                       },
                       title: Text("Payment Card"),
                       subtitle: Text("See my payment card option",style: TextStyle(color: lightColor,fontSize: 12),),

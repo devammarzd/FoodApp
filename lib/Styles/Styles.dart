@@ -8,16 +8,20 @@ class Fonts {
 }
 
 Color lightColor = Colors.grey;
+Color backgroundLightColor = Color(0xffebe8e8);
 
 final ThemeData themeData = ThemeData(
     primaryColor: primaryColor,
     accentColor: primaryColor,
     cursorColor: Colors.black,
+
     fontFamily: Fonts.mainFont,
     textTheme: TextTheme(
+      
       headline1: TextStyle(
           //This style is for product card headings that are in grid view
           fontSize: 14,
+          
           fontWeight: FontWeight.bold,
           color: Colors.black,
           fontFamily: Fonts.mainFont,
@@ -43,19 +47,30 @@ final ThemeData themeData = ThemeData(
         color: Colors.black,
         fontFamily: Fonts.mainFont,
       ),
-
-      bodyText1: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-        fontFamily: Fonts.mainFont,
-      ),
-      bodyText2:  TextStyle(//for common heading of font size 16
+headline5: 
+ TextStyle(
+  // for common heading of font size 16
         fontSize: 16,
         fontWeight: FontWeight.bold,
         color: Colors.black,
         fontFamily: Fonts.mainFont,
       ),
+
+
+
+
+      // bodyText1: TextStyle(
+      //   fontSize: 18,
+      //   fontWeight: FontWeight.bold,
+      //   color: Colors.black,
+      //   fontFamily: Fonts.mainFont,
+      // ),
+      // bodyText2:  TextStyle(//for common heading of font size 16
+      //   fontSize: 16,
+      //   fontWeight: FontWeight.bold,
+      //   color: Colors.black,
+      //   fontFamily: Fonts.mainFont,
+      // ),
     ));
 
 class CustomLargeButton extends StatelessWidget {

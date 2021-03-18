@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:food_app/Screens/Filter/FilterScreen.dart';
 import 'package:food_app/Screens/ProfileScreens/ProfileScree.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 
@@ -48,7 +49,13 @@ class CusAppBar extends StatelessWidget {
       actions: withSearchnBasket
           ? [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                       Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => FilterScreen()),
+                              );
+                  },
                   splashRadius: 25,
                   icon: Icon(
                     Icons.search_rounded,

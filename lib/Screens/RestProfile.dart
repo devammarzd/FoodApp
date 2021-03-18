@@ -4,7 +4,9 @@ import 'package:food_app/CustomWidgets/NearbyRestWidget.dart';
 import 'package:food_app/Data/FoodTypes.dart';
 import 'package:food_app/Data/NearbyRest.dart';
 import 'package:food_app/Data/SearchData.dart';
+import 'package:food_app/Screens/DishDetails.dart';
 import 'package:food_app/Screens/Popular%20Food/PopularFood.dart';
+import 'package:food_app/Screens/RestaurantMap/RestaurantMap.dart';
 import 'package:food_app/Styles/StyleConstants.dart';
 import 'package:food_app/Styles/Styles.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -34,39 +36,7 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                   children: [
                     Text(
                       'Popular Foods',
-                      style: Theme.of(context).textTheme.bodyText2,
-                    ),
-                    InkWell(
-                        onTap: () {
-                          //           Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //       builder: (context) => PopularFood()),
-                          // );
-                        },
-                        borderRadius: BorderRadius.circular(500),
-                        child: Container(
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500)),
-                            child: Text(
-                              "View All",
-                              style: TextStyle(fontSize: 13),
-                            ))),
-
-                  ],
-                ),
-              ),
-              popularfoodsSlider(),
-                 Padding(
-                padding: paddingFromScreenBorder,
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Best Seller',
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.headline5,
                     ),
                     InkWell(
                         onTap: () {
@@ -83,7 +53,39 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                                 borderRadius: BorderRadius.circular(500)),
                             child: Text(
                               "View All",
-                              style: TextStyle(fontSize: 13),
+                              style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),
+                            ))),
+
+                  ],
+                ),
+              ),
+              popularfoodsSlider(),
+                 Padding(
+                padding: paddingFromScreenBorder,
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Best Seller',
+                      style: Theme.of(context).textTheme.headline5,
+                    ),
+                    InkWell(
+                        onTap: () {
+                          //           Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //       builder: (context) => Food()),
+                          // );
+                        },
+                        borderRadius: BorderRadius.circular(500),
+                        child: Container(
+                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(500)),
+                            child: Text(
+                              "View All",
+                              style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),
                             ))),
 
                   ],
@@ -118,118 +120,128 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                   elevation: 4,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)),
-                  child: Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: double.infinity,
-                          height: sizeHeight(context) / 5.4,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Stack(
-                            children: [
-                              Container(
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(30),
-                                  child: Image.asset(
-                                    searchData[i]["image"],
-                                    height: sizeHeight(context) / 5.8,
-                                    width: double.infinity,
-                                    fit: BoxFit.cover,
+                  child: InkWell(
+                    onTap: (){
+                        Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DishDetails()),
+                              );
+                    },
+                         borderRadius: BorderRadius.circular(30),
+                                      child: Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: double.infinity,
+                              height: sizeHeight(context) / 5.4,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30)),
+                              child: Stack(
+                                children: [
+                                  Container(
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(30),
+                                      child: Image.asset(
+                    searchData[i]["image"],
+                    height: sizeHeight(context) / 5.8,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  Positioned(
+                                      top: 10,
+                                      right: 10,
+                                      child: Container(
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.circular(500),
+                        color: Colors.white),
+                    child: Icon(
+                      Icons.favorite,
+                      color: Colors.red,
+                      size: 20,
+                    ),
+                                      )),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: primaryColor),
+                                      padding: EdgeInsets.fromLTRB(12, 3, 12, 3),
+                                      child: Text(
+                    searchData[i]["price"],
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600),
+                                      ),
+                                    ),
+                                  )
+                                ],
                               ),
-                              Positioned(
-                                  top: 10,
-                                  right: 10,
-                                  child: Container(
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(500),
-                                        color: Colors.white),
-                                    child: Icon(
-                                      Icons.favorite,
-                                      color: Colors.red,
-                                      size: 20,
-                                    ),
-                                  )),
-                              Align(
-                                alignment: Alignment.bottomCenter,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(50),
-                                      color: primaryColor),
-                                  padding: EdgeInsets.fromLTRB(12, 3, 12, 3),
-                                  child: Text(
-                                    searchData[i]["price"],
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  width: sizeWidth(context),
-                                  child: Text(searchData[i]["name"],
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  searchData[i]["desc"],
-                                  style: TextStyle(
-                                      color: lightColor, fontSize: 12),
-                                ),
-                                Expanded(child: SizedBox()),
-                                Row(
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: starColor,
-                                      size: 20,
-                                    ),
-                                    Text(
-                                      searchData[i]['rating'],
-                                      style: TextStyle(fontSize: 12),
-                                    ),
-                                    Expanded(child: SizedBox()),
-                                    Icon(
-                                      Icons.alarm_rounded,
-                                      size: 20,
-                                      color: primaryColor,
-                                    ),
-                                    Text(
-                                      searchData[i]["time"],
-                                      style: TextStyle(fontSize: 12),
+                                    Container(
+                                      width: sizeWidth(context),
+                                      child: Text(searchData[i]["name"],
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline5),
                                     ),
                                     SizedBox(
-                                      width: 3,
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      searchData[i]["desc"],
+                                      style: TextStyle(
+                      color: lightColor, fontSize: 12),
+                                    ),
+                                    Expanded(child: SizedBox()),
+                                    Row(
+                                      children: [
+                    Icon(
+                      Icons.star,
+                      color: starColor,
+                      size: 20,
+                    ),
+                    Text(
+                      searchData[i]['rating'],
+                      style: TextStyle(fontSize: 12),
+                    ),
+                    Expanded(child: SizedBox()),
+                    Icon(
+                      Icons.alarm_rounded,
+                      size: 20,
+                      color: primaryColor,
+                    ),
+                    Text(
+                      searchData[i]["time"],
+                      style: TextStyle(fontSize: 12),
+                    ),
+                    SizedBox(
+                      width: 3,
+                    )
+                                      ],
                                     )
                                   ],
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                   ),
                 ),
               ),
@@ -332,148 +344,158 @@ class _RestProfileScreenState extends State<RestProfileScreen> {
                   children: [
                     Align(
                       alignment: Alignment.bottomCenter,
-                      child: Container(
-                        width: sizeWidth(context) / 1.3,
-                        height: 180,
-                        decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey[200],
-                                  offset: Offset(0, 10),
-                                  blurRadius: 20)
-                            ],
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(25)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(7.0),
-                          child: Column(
-                            children: [
-                              Align(
-                                alignment: Alignment.topRight,
-                                child: Container(
-                                  padding: EdgeInsets.all(7),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(500),
-                                      color: primaryColor),
-                                  child: Icon(
-                                    Icons.bookmark,
-                                    color: Colors.white,
-                                    size: 22,
+                      child: InkWell(
+                         borderRadius: BorderRadius.circular(25),
+                        onTap: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => RestaurantMap()),
+                              );
+                        },
+                                              child: Container(
+                          width: sizeWidth(context) / 1.3,
+                          height: 180,
+                          decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey[200],
+                                    offset: Offset(0, 10),
+                                    blurRadius: 20)
+                              ],
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(7.0),
+                            child: Column(
+                              children: [
+                                Align(
+                                  alignment: Alignment.topRight,
+                                  child: Container(
+                                    padding: EdgeInsets.all(7),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(500),
+                                        color: primaryColor),
+                                    child: Icon(
+                                      Icons.bookmark,
+                                      color: Colors.white,
+                                      size: 22,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text(
-                                "Burger King",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              ),
-                              SizedBox(
-                                height: 3,
-                              ),
-                              Container(
-                                  width: sizeWidth(context) / 2.8,
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "42 Riverside Se.NonCross GA 30092",
-                                    maxLines: 2,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: lightColor, fontSize: 12),
-                                  )),
-                              Expanded(
-                                child: SizedBox(),
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(child: SizedBox()),
-                                  Icon(
-                                    Icons.star,
-                                    color: starColor,
-                                    size: 24,
-                                  ),
-                                  Text(
-                                    "4.9",
-                                    style: TextStyle(fontSize: 14),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Icon(
-                                    Icons.alarm_rounded,
-                                    size: 24,
-                                    color: primaryColor,
-                                  ),
-                                  Text(
-                                    "20-30 Mins",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Icon(
-                                    MdiIcons.moped,
-                                    size: 26,
-                                    color: Colors.yellow[800],
-                                  ),
-                                  Text(
-                                    "Free Delivery",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  Expanded(child: SizedBox()),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: lightgreyColor,
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+                                Text(
+                                  "Burger King",
+                                  style: Theme.of(context).textTheme.bodyText1,
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Container(
+                                    width: sizeWidth(context) / 2.8,
                                     alignment: Alignment.center,
                                     child: Text(
-                                      nearbyData[0]["detail"][0],
+                                      "42 Riverside Se.NonCross GA 30092",
+                                      maxLines: 2,
+                                      textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.grey[400],
-                                          fontSize: 12),
+                                          color: lightColor, fontSize: 12),
+                                    )),
+                                Expanded(
+                                  child: SizedBox(),
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Expanded(child: SizedBox()),
+                                    Icon(
+                                      Icons.star,
+                                      color: starColor,
+                                      size: 24,
                                     ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: lightgreyColor,
-                                      borderRadius: BorderRadius.circular(20),
+                                    Text(
+                                      "4.9",
+                                      style: TextStyle(fontSize: 14),
                                     ),
-                                    padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      nearbyData[0]["detail"][1],
-                                      style: TextStyle(
-                                          color: Colors.grey[400],
-                                          fontSize: 12),
+                                    SizedBox(
+                                      width: 10,
                                     ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: lightgreyColor,
-                                      borderRadius: BorderRadius.circular(20),
+                                    Icon(
+                                      Icons.alarm_rounded,
+                                      size: 24,
+                                      color: primaryColor,
                                     ),
-                                    padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      nearbyData[0]["detail"][2],
-                                      style: TextStyle(
-                                          color: Colors.grey[400],
-                                          fontSize: 12),
+                                    Text(
+                                      "20-30 Mins",
+                                      style: TextStyle(fontSize: 12),
                                     ),
-                                  ),
-                                ],
-                              )
-                            ],
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Icon(
+                                      MdiIcons.moped,
+                                      size: 26,
+                                      color: Colors.yellow[800],
+                                    ),
+                                    Text(
+                                      "Free Delivery",
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                    Expanded(child: SizedBox()),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: lightgreyColor,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        nearbyData[0]["detail"][0],
+                                        style: TextStyle(
+                                            color: Colors.grey[400],
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: lightgreyColor,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        nearbyData[0]["detail"][1],
+                                        style: TextStyle(
+                                            color: Colors.grey[400],
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: lightgreyColor,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        nearbyData[0]["detail"][2],
+                                        style: TextStyle(
+                                            color: Colors.grey[400],
+                                            fontSize: 12),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
