@@ -29,6 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   animated_bottom_navigation_bar: ^0.2.1
   material_design_icons_flutter: ^4.0.5855
+  background_fetch: '^0.7.0'
 
 dev_dependencies:
   flutter_test:

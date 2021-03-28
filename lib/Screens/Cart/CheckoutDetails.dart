@@ -458,7 +458,7 @@ class _CheckoutDetailsState extends State<CheckoutDetails> {
                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => RunningOrderScreen()),
+                                    builder: (context) => MyOrderScreen()),
                               );
                         },
                         buttonText: "Checkout",
